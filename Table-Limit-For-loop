@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int x;
+	cout << "Enter a number to get the table of it: " << endl;
+	cin >> x;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
+	int y;
+	cout << "Enter a number until which you want to be printed: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> y;
+	}
+	for (int z = 0; z <= y; z++)
+	{
+		cout << x << " x " << z << " = " << x * z << endl;
+
+	}
+}
